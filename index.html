@@ -18,7 +18,11 @@
     <div class="row branding">
       <div class="col-xs-6">
         <div class="invoice-number-container">
-          <label for="invoice-number">Invoice #</label><input type="text" id="invoice-number" ng-model="invoice.invoice_number" />
+          <br /><input type="text" ng-model="invoice.company_info.name"/>
+          <br /><input type="text" ng-model="invoice.company_info.web_link"/>
+          <br /><input type="text" ng-model="invoice.company_info.address1"/>
+          <br /><input type="text" ng-model="invoice.company_info.address2"/>
+          <br /><input type="text" ng-model="invoice.company_info.postal"/>
         </div>
       </div>
       <div class="col-xs-6 logo-container">
@@ -34,22 +38,19 @@
     </div>
     <div class="row infos">
       <div class="col-xs-6">
-        <div class="input-container"><input type="text" ng-model="invoice.customer_info.name"/></div>
-        <div class="input-container"><input type="text" ng-model="invoice.customer_info.web_link"/></div>
-        <div class="input-container"><input type="text" ng-model="invoice.customer_info.address1"/></div>
-        <div class="input-container"><input type="text" ng-model="invoice.customer_info.address2"/></div>
-        <div class="input-container"><input type="text" ng-model="invoice.customer_info.postal"/></div>
+        <br /><input type="text" ng-model="invoice.customer_info.name"/>
+        <br /><input type="text" ng-model="invoice.customer_info.web_link"/>
+        <br /><input type="text" ng-model="invoice.customer_info.address1"/>
+        <br /><input type="text" ng-model="invoice.customer_info.address2"/>
+        <br /><input type="text" ng-model="invoice.customer_info.postal"/>
         <div class="input-container" data-ng-hide='printMode'>
           <select ng-model='currencySymbol' ng-options='currency.symbol as currency.name for currency in availableCurrencies'></select>
         </div>
       </div>
       <div class="col-xs-6 left">
-        <div class="invoice-number-container">
-          <label for="invoice-number">Invoice #</label><input type="text" id="invoice-number" ng-model="invoice.invoice_number" />
-          <label for="invoice-number">Date    :</label>&nbsp;<input type="text" id="invoice-number" ng-model="invoice.invoice_date" />
-          <label for="invoice-number">Due Date</label>&nbsp;<input type="text" ng-model="invoice.invoice_due_date" />
-          <div></div>
-        </div>
+          <label for="invoice-number">Invoice #:</label><input type="text" id="invoice-number" ng-model="invoice.invoice_number" >
+         <br/> <label for="invoice-number">Date:</label><input type="text" id="invoice-number" ng-model="invoice.invoice_date" >
+         <br />    <label for="invoice-number">Due Date:</label><input type="text" ng-model="invoice.invoice_due_date" >
       </div>
     </div>
     <div class="items-table">
